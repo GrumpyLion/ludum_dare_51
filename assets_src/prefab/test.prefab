@@ -1,0 +1,11 @@
+entity:
+  name: test
+  uuid: ee63a210-7281-4e15-9a94-348af3f8a01b
+  components:
+    - Transform2D:
+        position: [0, 0]
+    - Sprite:
+        layer: 0
+        sprite:
+          material: Halley/Sprite
+          tex_image: test

@@ -3,7 +3,7 @@ cmake_minimum_required (VERSION 3.16)
 # halley engine path
 set(HALLEY_PATH ${CMAKE_CURRENT_SOURCE_DIR}/halley CACHE STRING "Path to Halley root")
 
-project (halleyGame)
+project (LD51)
 set(HALLEY_PROJECT_EMBED 1)
 set(HALLEY_PATH ${CMAKE_CURRENT_SOURCE_DIR}/halley)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${HALLEY_PATH}/cmake/")
@@ -18,17 +18,15 @@ set (SOURCES
 	"prec.cpp"
 	"src/game.cpp"
 	"src/game_stage.cpp"
-	"src/editor/game_scene_editor.cpp"
 	)
 
 set (HEADERS
 	"prec.h"
 	"src/game.h"
 	"src/game_stage.h"
-	"src/editor/game_scene_editor.h"
 	)
 
 set (GEN_DEFINITIONS
 	)
 
-halleyProject(halleyGame "${SOURCES}" "${HEADERS}" "" "${GEN_DEFINITIONS}" ${CMAKE_CURRENT_SOURCE_DIR}/${HALLEY_GAME_BIN_DIR})
+halleyProject(LD51 "${SOURCES}" "${HEADERS}" "" "${GEN_DEFINITIONS}" ${CMAKE_CURRENT_SOURCE_DIR}/${HALLEY_GAME_BIN_DIR})

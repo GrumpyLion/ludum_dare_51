@@ -1,5 +1,6 @@
 entity:
-  - uuid: 95c97be2-39bb-4e6d-a86d-16a169b34146
+  - uuid: b08f248f-e5dd-4bd7-95f6-c94b3336143d
+    prefab: test
     components:
       - Transform2D:
-          position: [34, 8]
+          position: [0, 0]

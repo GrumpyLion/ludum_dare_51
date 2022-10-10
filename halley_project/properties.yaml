@@ -1,7 +1,7 @@
 assetPackManifest: halley_project/asset_manifest.yaml
-binName: halleyGame
+binName: LD51
 defaultZoom: 1
 importByExtension: 0
-name: halleyGame
+name: LD51
 platforms: [pc]
 uuid: b3980e5c-6eba-48c4-a7bd-6f345e98211e

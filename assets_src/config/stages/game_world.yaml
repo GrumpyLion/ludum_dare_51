@@ -1,6 +1,8 @@
 ---
+
 timelines:
-  variableUpdate:
 
   render:
+  - SpriteRenderer
+
 ...

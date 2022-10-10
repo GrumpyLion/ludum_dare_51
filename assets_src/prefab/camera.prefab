@@ -1,0 +1,8 @@
+entity:
+  name: camera
+  uuid: 44eb84a9-48a1-4e14-b781-32d99418e12e
+  components:
+    - Transform2D:
+        {}
+    - Camera:
+        zoom: 5

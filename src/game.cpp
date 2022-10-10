@@ -1,8 +1,6 @@
 #include "game.h"
 #include "game_stage.h"
 
-#include "editor/game_scene_editor.h"
-
 void initOpenGLPlugin(IPluginRegistry &registry);
 void initSDLSystemPlugin(IPluginRegistry &registry, std::optional<String> cryptKey);
 void initSDLAudioPlugin(IPluginRegistry &registry);
@@ -42,20 +40,20 @@ ResourceOptions HalleyGame::initResourceLocator(const Path& gamePath, const Path
 		// movie.dat (importing video cutscenes)
 		const String packs[] = { "images.dat", "shaders.dat", "config.dat" };
 		for (auto& pack: packs) {
-			locator.addPack(Path(assetsPath) / pack);
+			locator.addPack(Path(assetsPath) / pack, ", true");
 		}
 	}
-	return {};
+	return ResourceOptions(true);
 }
 
 String HalleyGame::getName() const
 {
-	return "Halley Game";
+	return "LD51";
 }
 
 String HalleyGame::getDataPath() const
 {
-	return "Halley/HalleyGame";
+	return "GrumpyLion/LD51";
 }
 
 bool HalleyGame::isDevMode() const
@@ -65,18 +63,16 @@ bool HalleyGame::isDevMode() const
 
 std::unique_ptr<Stage> HalleyGame::startGame()
 {
-	bool vsync = true;
-
 	getAPI().video->setWindow(WindowDefinition(WindowType::Window, Vector2i(1280, 720), getName()));
-	getAPI().video->setVsync(vsync);
+	getAPI().video->setVsync(true);
 	getAPI().audio->startPlayback();
 	return std::make_unique<GameStage>();
 }
 
 
-std::unique_ptr<Halley::ISceneEditor> HalleyGame::createSceneEditorInterface()
+std::unique_ptr<ISceneEditor> HalleyGame::createSceneEditorInterface()
 {
-	return std::make_unique<GameSceneEditor>();
+	return std::make_unique<SceneEditor>();
 }
 
 HalleyGame(HalleyGame);
