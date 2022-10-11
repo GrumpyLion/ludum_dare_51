@@ -8,9 +8,9 @@ if not exist build mkdir build
 cd build
 
 mkdir "%~dp0..\halley\bin\"
-xcopy "%~dp0..\halley_deps\bin\SDL2.dll" "%~dp0..\halley\bin\" /C /Q /Y
-xcopy "%~dp0..\halley_deps\bin\dxcompiler.dll" "%~dp0..\halley\bin\" /C /Q /Y
-xcopy "%~dp0..\halley_deps\bin\ShaderConductor.dll" "%~dp0..\halley\bin\" /C /Q /Y
+xcopy "%~dp0..\halley_deps\dlls\SDL2.dll" "%~dp0..\halley\bin\" /C /Q /Y
+xcopy "%~dp0..\halley_deps\dlls\dxcompiler.dll" "%~dp0..\halley\bin\" /C /Q /Y
+xcopy "%~dp0..\halley_deps\dlls\ShaderConductor.dll" "%~dp0..\halley\bin\" /C /Q /Y
 
 cmake -G "Visual Studio 16 2019" ^
     -A x64 ^
